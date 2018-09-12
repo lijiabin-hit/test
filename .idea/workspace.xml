@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80a55df4-724f-45c9-86dc-968afc648aee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
     </list>
     <ignored path="exercise.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -216,6 +216,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodejspro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -231,15 +245,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\1学习\h5+css3实例\exercise\拼图\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\1学习\h5+css3实例\exercise\自制css特效\img" />
       <recent name="D:\1学习\h5+css3实例\exercise" />
       <recent name="D:\1学习\h5+css3实例\exercise\轮播图\img" />
       <recent name="D:\1学习\h5+css3实例\exercise\拼图\img" />
       <recent name="D:\1学习\h5+css3实例\exercise\website_exercise\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\1学习\h5+css3实例\exercise\拼图\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -314,12 +328,12 @@
       <workItem from="1536475164994" duration="9705000" />
       <workItem from="1536566790404" duration="9687000" />
       <workItem from="1536623048193" duration="6164000" />
-      <workItem from="1536743492560" duration="607000" />
+      <workItem from="1536743492560" duration="946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88798000" />
+    <option name="totallyTimeSpent" value="89137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
