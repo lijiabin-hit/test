@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script>
+        //测试exect方法
+//        var i=/java/g;
+        //        var result;
+        ////        console.log(i.exec("javascript is java is hello ooo m"));
+        ////        console.log(i.exec("javascript is java is hello ooo m"));
+        //        while ((result=i.exec("javascript is java is hello ooo m"))!=null){
+        //            console.log(result);
+        //        }
+        //测试replace方法。
+        var i=/\[(\w*)\]/g;
+        var str="i[m].n[o]";
+        result=str.replace(i,".$1");
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

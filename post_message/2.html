@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.addEventListener('message',function (ev) {
+            if (false){
+                alert("信息来源有误");
+            }else {
+                document.write(ev.data)
+                //console.log(ev);
+                ev.source.postMessage("iframe",ev.origin)
+            }
+        },false)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

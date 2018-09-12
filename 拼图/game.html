@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼图游戏</title>
+    <link href="game.css" rel="stylesheet">
+
+</head>
+<body>
+<button onclick="randomImg()" style="display:block;position:relative;margin: 0 auto">开始游戏</button>
+<div id="gamearea">
+
+</div>
+<script>
+    var gamearea=document.getElementById('gamearea');
+    var imgOrgArr=[];
+    var imgRandomArr=[];
+    var first=null;
+    var isPick=false;
+    var top=1;
+    for(var i=0;i<4;i++){
+        for(var j=0;j<4;j++){
+            var self=document.createElement('div');
+            self.style.left=i*100+'px';
+            self.style.top=j*100+'px';
+            self.style.backgroundImage="url(img/timg.jpg)";
+            self.style.backgroundSize="400%";
+            self.style.backgroundPosition=(-i)*100+"px "+(-j)*100+"px";
+            self.style.backgroundOrigin="border-box";
+            self.id=i+"_"+j;
+            self.addEventListener("click",clickHandle);
+            imgOrgArr.push(self.id);
+            imgRandomArr.push(self.id);
+            gamearea.appendChild(self);
+        }
+    }
+    function clickHandle(e) {
+        if (!isPick) {
+            e.target.classList.add("active");
+            first=e.target.id;
+            isPick=true;
+        }else {
+            if (e.target.id==first){
+                console.log(e.target.id);
+                e.target.classList.remove('active');
+                isPick=false;
+            }else {
+                e.target.style.zIndex=++top;
+                var templeft=e.target.style.left;
+                var temptop=e.target.style.top;
+                var temp=document.getElementById(first);
+                temp.style.zIndex=++top;
+                e.target.style.left=temp.style.left;
+                e.target.style.top=temp.style.top;
+                temp.style.left=templeft;
+                temp.style.top=temptop;
+                var tempNum1=imgRandomArr.indexOf(e.target.id);
+                var tempNum2=imgRandomArr.indexOf(first);
+                var tempNum=imgRandomArr[tempNum1];
+                imgRandomArr[tempNum1]=imgRandomArr[tempNum2];
+                imgRandomArr[tempNum2]=tempNum;
+                if (imgRandomArr.toString()==imgOrgArr.toString()){
+                    function vectory() {
+                        alert("you win!!");
+                    }
+                    setTimeout(vectory,1000);
+                }
+                console.log(imgOrgArr);
+                console.log(imgRandomArr);
+                isPick=false;
+                first=null;
+                temp.classList.remove('active');
+            }
+        }
+    }
+    function randomImg() {
+        imgRandomArr.sort(function () {
+            return Math.random()>0.5?-1:1;
+        })
+        console.log(imgRandomArr);
+        for(var i=0;i<imgRandomArr.length;i++){
+            var positionTemp=imgOrgArr[i].split("_");
+            var temp=document.getElementById(imgRandomArr[i]);
+            temp.style.left=parseInt(positionTemp[0])*100+'px';
+            temp.style.top=parseInt(positionTemp[1])*100+'px';
+        }
+    }
+</script>
+</body>
+</html>

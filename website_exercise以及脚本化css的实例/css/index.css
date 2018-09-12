@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-size: 微软雅黑;
+    background: url("../img/bg.jpg") repeat;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*头部信息的css*/
+[id$="wrapper"]{
+    width: 100%;
+}
+#headlink{
+    width: 100%;
+    background-color: gray;
+    text-align: right;
+}
+#headlink ul{
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+#headlink li{
+    font-size: 0.6em;
+    list-style: none;
+    display: inline-block;
+    /*margin: 4px 10px;*/
+    line-height: 25px;
+    margin-right: 10px;
+}
+
+#header{
+    width: 100%;
+    background-color: white;
+}
+#headercontainer{
+    max-width:1200px;
+    min-width: 800px;
+    margin:0 auto;
+}
+#headercontainer img{
+    height: 80px;
+}
+#headercontainer span{
+    display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-top: 25px;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#headcontentwrapper img{
+    width:100%;
+    min-width: 800px;
+}
+#headerwrapper nav{
+    width: 100%;
+    height: 50px;
+    background-color: #cccccc;
+}
+#headerwrapper ul{
+    width: 1200px;
+    margin:0 auto;
+}
+#headerwrapper nav li{
+    display: inline-block;
+    height: 100%;
+}
+#headerwrapper nav li a{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-top: 14px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+}
+
+/*内容部分*/
+#firstcontent{
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 20px auto;
+}
+#firstcontent a{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 32%;
+    height: 100px;
+    margin: 0;
+    padding: 5px;
+    vertical-align: top;
+    overflow: hidden;
+    background-color: #cccccc;
+}
+#firstcontent a:first-child{
+    margin-right: 2%;
+}
+#firstcontent a:last-child{
+    margin-left: 2%;
+}
+#firstcontent a img{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    height: calc(100% - 5px);
+}
+#firstcontent a p{
+    display: inline-block;
+    margin-left: 5px;
+    width: calc(70% - 5px);
+    font-size: 0.7em;
+    vertical-align: top;
+}
+#firstcontent a p span:first-child{
+    display: inline-block;
+    width: 100%;
+    color:red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+#othercontent{
+    max-width: 1200px;
+    min-width: 800px;
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 1px;
+    margin: 0 auto;
+}
+
+#secondtitle,#thridtitle{
+    border-bottom: solid 2px #682621;
+    position: relative;
+}
+#secondtitle h2,#thridtitle h2{
+    font-size: 1em;
+    margin:8px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#secondtitle span,#thridtitle span{
+    position: absolute;
+    font-size: 0.6em;
+    right: 5px;
+    bottom: 5px;
+}
+#secondcontent figure,#thirdcontent figure{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 18px;
+    margin-left: 16px;
+    width: calc(25% - 20px);
+    padding:0 1px;
+    position: relative;
+    overflow: hidden;
+}
+#secondcontent figure img,#thirdcontent figure img{
+    width: 100%;
+    padding: 0;
+    margin:0;
+    -webkit-transition: transform 2s;
+    -moz-transition: transform 2s;
+    -ms-transition: transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
+}
+#secondcontent figure img:hover{
+    transform: scale(1.5);
+}
+#thirdcontent figure img:hover{
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+@keyframes myanimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(40deg);
+    }
+    80%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#secondcontent figure span,#thirdcontent figure span{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    vertical-align: bottom;
+    text-align: center;
+    opacity: 0.5;
+    background-color: black;
+    color:white;
+    font-size: 0.6em;
+    line-height: 25px;
+}

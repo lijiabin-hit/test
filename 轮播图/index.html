@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div#container{
+            position: relative;
+            height: 500px;
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #container div{
+            position: absolute;
+            height: 500px;
+            overflow: hidden;
+            width: 6000px;
+            /*transition: left 1s;*/
+        }
+        .imgcontainer{
+            transition: left 1s;
+        }
+        #container div img{
+            display: inline-block;
+            vertical-align: top;
+            width: 1000px;
+            margin: 0;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var imgs=document.getElementById("imgcontainer");
+            var index=0;
+            function addClass(){imgs.classList.add("imgcontainer")}
+            function removeClass() {
+                imgs.classList.remove("imgcontainer");
+            }
+            function tiao() {
+                removeClass();
+                index=0;
+                imgs.style.left="0";
+                setTimeout(addClass,100);
+            }
+            function anim() {
+                imgs.style.left=imgs.offsetLeft-imgs.parentNode.offsetWidth+"px";
+                index+=1;
+            }
+            function moves() {
+                var time,time1,time2;
+                if (index<5){
+                    clearTimeout(time1);
+                    clearTimeout(time2);
+                    anim();
+                    if (index==0){
+                    }else if (index==5){
+                        console.log(index);
+                        clearTimeout(time);
+                        time1=setTimeout(tiao,1000);
+                        time2=setTimeout(moves,2000);
+                    }else {
+                        time=setTimeout(moves,2000);
+                    }
+
+                }
+            }
+            time=setTimeout(moves,2000);
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div id="imgcontainer" class="imgcontainer" style="left: 0">
+        <img src="./img/1.jpg" alt=""><img src="./img/2.jpg" alt=""><img src="./img/3.jpg" alt=""><img src="./img/4.jpg" alt=""><img src="./img/5.jpg" alt=""><img src="./img/1.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>

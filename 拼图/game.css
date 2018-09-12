@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#gamearea{
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    border:1px solid black;
+    box-sizing: border-box;
+}
+#gamearea div{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border:1px solid white;
+    border-radius: 3px;
+    box-sizing: border-box;
+    -webkit-transition: left 1s,top 1s;
+    -moz-transition: left 1s,top 1s;
+    -ms-transition: left 1s,top 1s;
+    -o-transition: left 1s,top 1s;
+    transition: left 1s,top 1s;
+}
+#gamearea .active{
+    border: solid blue 2px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.addEventListener('message',function (ev) {
+            if (ev.origin!=="http://localhost:81"){
+                alert("信息来源有误艾弗森发的");
+            }else {
+                console.log(ev);
+            }
+        },false)
+        function hello() {
+            var iframe=window.frames[0];
+            iframe.postMessage("主页面","http://localhost:81")
+        }
+    </script>
+</head>
+<body>
+<iframe src="http://localhost:81/post_message/2.html" frameborder="0" width="400px" onload="hello()"></iframe>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function hello() {
+            return new Promise(function (reslove,reject) {
+                console.log("123");
+                setTimeout(reslove,2000);
+            })
+        }
+        function hello2() {
+            console.log("123434324");
+        }
+
+        hello().then(hello2());
+    </script>
+</head>
+<body>
+
+</body>
+</html>
